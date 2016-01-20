@@ -86,7 +86,7 @@
 #define DELTA_DIAGONAL_ROD 243 // mm (215)
 
 // Horizontal offset from middle of printer to smooth rod center.
-#define DELTA_SMOOTH_ROD_OFFSET 189// mm (137.0  187) 
+#define DELTA_SMOOTH_ROD_OFFSET 186// mm (137.0  187) 
 
 // Horizontal offset of the universal joints on the end effector.
 #define DELTA_EFFECTOR_OFFSET 25// mm (19.9)
@@ -343,7 +343,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 // For deltabots this means top and center of the cartesian print volume.
 #define MANUAL_X_HOME_POS 0
 #define MANUAL_Y_HOME_POS 0
-#define MANUAL_Z_HOME_POS 315// For delta: Distance between nozzle and print surface after homing.
+#define MANUAL_Z_HOME_POS (315 - 115.8)// For delta: Distance between nozzle and print surface after homing.
 
 #define AUTOLEVEL_GRID 15
 // 26 Distance between autolevel Z probing points, should be less than print surface radius/3.
@@ -352,7 +352,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 #define HOMING_FEEDRATE {80*60, 80*60, 80*60, 0}  // set the homing speeds (mm/min)
 
 #define Z_RAISE_BETWEEN_PROBING=20
-#define Z_PROBE_OFFSET {0,0,-.6,0}  // (0, 14, -6.5, 0){24.6,-21,0,0}{24.6,-21,0,0} X, Y, Z, E distance between hotend nozzle and deployed bed leveling probe.(0,19,-8,0)
+#define Z_PROBE_OFFSET {-29,11,-.6,0}  // (0, 14, -6.5, 0){24.6,-21,0,0}{24.6,-21,0,0} X, Y, Z, E distance between hotend nozzle and deployed bed leveling probe.(0,19,-8,0)
 
 // default settings
 
